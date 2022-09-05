@@ -18,7 +18,7 @@ const BOUND_BOX_EXPAND = 0.01;
  * 2. 将自动创建外层的包围盒，可以在场景编辑器内所见即所得的点选
  * 
  * ★★★ 已知问题 ★★★
- * 1. 使用 Prefab 时不要打开 editing 修改，除非已经解除 Prefab 关联（节点变为白色）
+ * 1. 如果需要在子节点内嵌套其它 Prefab，需要在 Prefab 编辑界面修改保存，在场景内修改保存可能会出现保存不成功的情况。
  */
 @ccclass('SimplePrefab')
 @executeInEditMode

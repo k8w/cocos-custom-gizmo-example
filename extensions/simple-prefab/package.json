@@ -1,0 +1,25 @@
+{
+    "package_version": 2,
+    "version": "1.0.0",
+    "name": "simple-prefab",
+    "description": "i18n:simple-prefab.description",
+    "main": "./dist/main.js",
+    "devDependencies": {
+        "@types/node": "^16.0.1",
+        "typescript": "^4.3.4"
+    },
+    "author": "k8w",
+    "editor": ">=3.6.0",
+    "scripts": {
+        "build": "tsc -b",
+        "watch": "tsc -w"
+    },
+    "contributions": {
+        "asset-db": {
+            "mount": {
+                "path": "./assets",
+                "readonly": true
+            }
+        }
+    }
+}
