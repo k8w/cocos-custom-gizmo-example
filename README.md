@@ -28,4 +28,4 @@ Cocos 3.6 自定义 Gizmo 和 Editor 物件
 
 ## 注意事项
 1. `CustomEditorItem` 必须挂载在【顶层空节点】
-2. 在 Scene 中不可开启 `editing`，除非断开所有 `Prefab` 连接。
+2. 在 Scene 中不可开启 `editing`，除非断开所有 `Prefab` 连接，否则可能出现奇奇怪怪的问题。
