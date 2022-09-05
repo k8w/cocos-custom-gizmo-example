@@ -1,5 +1,20 @@
-Cocos 3.6 自定义 Gizmo
+Cocos 3.6 自定义 Gizmo 和 Editor 物件
 ===
+
+## 效果预览
+
+1. Prefab：（包含多个子节点和自定义 GIZMO）
+
+![image](https://user-images.githubusercontent.com/1681689/188359730-608763ad-c06b-4d60-ac26-e6bf60579620.png)
+
+2. 场景编辑：（看不见 Prefab 细节，防止误修改）
+
+![image](https://user-images.githubusercontent.com/1681689/188359795-c2f9b26b-1756-4e0b-89dc-f472ae9647ad.png)
+
+3. 构建和实际运行：（剔除自定义 GIZMO）
+
+![image](https://user-images.githubusercontent.com/1681689/188359828-7f519d7b-689b-4fb5-bdaa-0464994697af.png)
+
 
 ## 工作流程
 
