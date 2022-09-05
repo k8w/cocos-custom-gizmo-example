@@ -7,13 +7,15 @@
     "__uuid__": "a3cd009f-0ab0-420d-9278-b9fdab939bbc",
     "__expectedType__": "cc.EffectAsset"
   },
-  "_techIdx": "1",
+  "_techIdx": "2",
   "_defines": [
     {}
   ],
   "_states": [
     {
-      "rasterizerState": {},
+      "rasterizerState": {
+        "cullMode": 2
+      },
       "depthStencilState": {},
       "blendState": {
         "targets": [
@@ -26,10 +28,10 @@
     {
       "mainColor": {
         "__type__": "cc.Color",
-        "r": 0,
+        "r": 71,
         "g": 255,
-        "b": 31,
-        "a": 64
+        "b": 0,
+        "a": 87
       }
     }
   ]

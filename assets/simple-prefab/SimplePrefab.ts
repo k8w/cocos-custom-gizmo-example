@@ -2,24 +2,28 @@ import { CCObject, Color, Component, geometry, gfx, Layers, Material, MeshRender
 import { EDITOR } from 'cc/env';
 const { ccclass, property, executeInEditMode, playOnFocus } = _decorator;
 
-const GIZMO_NAME = '__GIZMO__';
-const BOUND_GIZMO_NAME = '__BOUND__';
+const GIZMO_NAME = '__GIZMO__ (EDITOR_ONLY)';
+const BOUND_GIZMO_NAME = '__BOUND__ (EDITOR ONLY)';
 const BOUND_BOX_EXPAND = 0.01;
 
 /**
- * ★★★ 注意 ★★★
- * 1. 必须挂载在【顶层空节点】
- * 2. 根节点上除本脚本之外，【不可挂载任何脚本】
+ * ★★★ 制作 Prefab ★★★
+ * 1. 挂载在 Prefab 的最外层节点上
+ * 2. 在 Prefab 编辑面板中点开 editing -> 编辑 -> 保存
+ * 3. 可以在 __GIZMO__ 中拖入 SpriteGizmo 来实现自定义 GIZMO
+ * 4. 也可在 __GIZMO__ 中自由拖入其它 3D 模型或物体，GIZMO 仅在编辑器内可见，构建发布时会剔除
  * 
- * 自定义场景中拖拉拽的物体，支持以下特性：
- * 1. 隐藏细节
- * 2. 自定义 Gizmo
- * 3. 自动创建选择包围盒
+ * ★★★ 使用 Prefab ★★★
+ * 1. 策划在场景中拖入 Prefab 直接使用（将不会看见 Prefab 的细节，也不会导致误修改）
+ * 2. 将自动创建外层的包围盒，可以在场景编辑器内所见即所得的点选
+ * 
+ * ★★★ 已知问题 ★★★
+ * 1. 使用 Prefab 时不要打开 editing 修改，除非已经解除 Prefab 关联（节点变为白色）
  */
-@ccclass('CustomEditorItem')
+@ccclass('SimplePrefab')
 @executeInEditMode
 @playOnFocus
-export abstract class CustomEditorItem extends Component {
+export class SimplePrefab extends Component {
 
     private _editing: boolean = false;
     @property

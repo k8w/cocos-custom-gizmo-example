@@ -2,12 +2,12 @@
   "ver": "1.1.39",
   "importer": "prefab",
   "imported": true,
-  "uuid": "e68cca54-7853-4c7b-803b-6afd32d647cb",
+  "uuid": "7008c44d-a4e8-4e96-9c49-7b5df40d94ca",
   "files": [
     ".json"
   ],
   "subMetas": {},
   "userData": {
-    "syncNodeName": "SeatableNode"
+    "syncNodeName": "毒刺"
   }
 }
